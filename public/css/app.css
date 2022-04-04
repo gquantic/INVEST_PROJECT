@@ -11286,3 +11286,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.rouble-icon {
+  content: "₽";
+  position: relative;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: inherit;
+}

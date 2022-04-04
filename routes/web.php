@@ -24,4 +24,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::resources([
+    'deposits' => \App\Http\Controllers\DepositController::class,
+]);
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

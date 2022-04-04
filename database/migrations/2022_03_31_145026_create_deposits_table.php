@@ -22,8 +22,8 @@ class CreateDepositsTable extends Migration
             $table->integer('amount');
 
             $table->text('comment')->nullable()->comment('Комментарий к депозиту');
-            $table->text('deposit_type')->nullable()->comment('Обычный депозит с возможностью снять средства.');
-            $table->date('deposit_until')->default(\Carbon\Carbon::now())->comment('До какого числа внесён депозит');
+            $table->text('deposit_type')->comment('Обычный депозит с возможностью снять средства.');
+            $table->timestamp('deposit_until')->default(\Carbon\Carbon::now()->addMonth(1))->comment('До какого числа внесён депозит');
 
             $table->timestamps();
         });
